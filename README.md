@@ -1,4 +1,4 @@
-# Simple Blog Web Application with Flask
+# Simple Blog Web Application with Flask and MongoDB
 
 A basic blog web application created using Flask, MongoDB, and Python. This application allows users to read, create, edit, and delete blog posts, as well as register and log in as administrators.
 
