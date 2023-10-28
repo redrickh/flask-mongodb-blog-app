@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% extends "header.html" %}
+{% block content %}
+   <body>
+    <h1>New Posts:</h1>
+
+          {% for product in product %}
+  <div class="product">
+
+            <h2><a href="{{ url_for('posts', name=product['name']) }}">{{ product['name'] }}</a></h2>
+            <br>
+            {{ product['content'] }}
+    </div>
+         {% endfor %}
+   </body>
+</html>
+      {% endblock %}

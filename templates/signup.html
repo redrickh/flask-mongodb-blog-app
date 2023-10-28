@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends "header.html" %}
+{% block content %}
+
+<body>
+<h1>Signup</h1>
+ <form method="POST" action="/signup">
+          <input type="text" name="username"
+                  placeholder="username" size="40px" required>
+     <p></p>
+     <input type="text" name="password"
+                  placeholder="password" size="40px" required>
+    <input type="submit" value="Signup">
+ </form>
+
+</body>
+
+</html>
+
+{% endblock %}

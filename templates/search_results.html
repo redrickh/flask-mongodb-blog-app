@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+{% extends "header.html" %}
+{% block content %}
+<body>
+    <h1>Search Result</h1>
+    <div class="product">
+    <table>
+        <tr>
+            <th>Name:</th>
+            <th>Content:</th>
+        </tr>
+        {% for result in search_results %}
+            <tr>
+                <td>{{ result.name }}</td>
+                <td>{{ result.content }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    </div>
+</body>
+</html>
+ {% endblock %}

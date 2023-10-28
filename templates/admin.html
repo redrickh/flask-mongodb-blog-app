@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% extends "header.html" %}
+{% block content %}
+   <body>
+    <h1>Admin</h1>
+      <hr>
+      <div class="content">
+         <form method="post">
+            <p>
+               <b><label for="content">Products</label></b>
+            </p>
+            <p>
+               <label>
+               <input type="text" name="name"
+                  placeholder="Product Name" size="70px" required>
+               </label>
+            <p></p>
+            <label>
+            <textarea name="content"
+               placeholder="Product Content" cols="70px" required></textarea>
+            </label>
+            </p>
+            <button type="submit">Submit</button>
+             <p></p>
+
+         </form>
+         <hr>
+
+      <form method="POST" action="/process">
+          <input type="text" name="search_query"
+                  placeholder="Product Name" size="70px" required>
+    <input type="submit" value="Search">
+
+           {% for result in search_results %}
+            <tr>
+                <td>{{ result.name }}</td>
+                <td>{{ result.content }}</td>
+            </tr>
+        {% endfor %}
+</form>
+
+         {% for product in product %}
+         <div class="product">
+            <p>{{ product['name'] }} <i>({{ product['content']}})</i></p>
+            <form method="POST" action="{{url_for('delete', id=product['_id'])}}">
+               <input type="submit" value ="Delete"
+                  onclick="return confirm('Are you sure you want to delete this entry?')">
+            </form>
+            <p></p>
+            <form method="POST" action="{{url_for('edit', id=product['_id'])}}">
+               <label>
+               <input type="text" name="name"
+                  placeholder="Product Name" size="70px" required>
+               </label>
+               <p></p>
+               <label>
+               <textarea name="content"
+                  placeholder="Product Content" cols="70px" required></textarea>
+               </label>
+               <p></p>
+               <input type="submit" value="Edit">
+            </form>
+         </div>
+
+         {% endfor %}
+         <p>
+         </p>
+      </div>
+   </body>
+</html>
+      {% endblock %}
