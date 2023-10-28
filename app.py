@@ -5,11 +5,10 @@ from bson.objectid import ObjectId
 import bcrypt
 import credentials
 
-
 # Create a new client and connect to the server
 client = MongoClient(credentials.uri, server_api=ServerApi('1'))
-#add your mongodb uri to your credentials.py file!
-#uri = "yourmongodburi"
+# add your mongodb uri to your credentials.py file!
+# uri = "your_mongo_db_uri"
 
 db = client.Cluster0
 product = db.product

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 {% extends "header.html" %}
 {% block content %}
 <body>
@@ -7,17 +7,12 @@
     {% for result in search_results %}
    <h1>{{ result.name }}</h1>
 </div>
-
-
     <div class="product">
     <table>
         <tr>
-
             <th>Content:</th>
         </tr>
-
             <tr>
-
                 <td>{{ result.content }}</td>
             </tr>
         {% endfor %}

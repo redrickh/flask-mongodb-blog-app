@@ -1,29 +1,51 @@
 
-
 body {
 
   color: #444;
-}
- .product {
-            padding: 20px;
-            margin: 10px;
-            background-color: #eee;
-        }
- .title {
-    text-align: center;
-  border: 3px solid green;
+  background-color: #C6D8AF;
 
 }
+ .product {
+
+            margin: auto;
+            background-color: #f2f2f2;
+            width: 80%;
+
+        }
+ .content {
+
+            margin: auto;
+            background-color: #f2f2f2;
+            width: 80%;
+        }
+
+ .title {
+    text-align: center;
+    border: 3px solid green;
+     width: 80%;
+      margin-left: 9.8%;
+
+}
+ a {
+  color: black;
+
+}
+ a:visited {
+  background-color: cyan;
+}
+
 /*
  * Formatting the header area
 
 /* The navigation bar */
 .navbar {
+  margin-left: 9.5%;
+
   overflow: hidden;
   background-color: #333;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+  position: fixed;
+  top: 0;
+  width: 80%;
 }
 
 /* Links inside the navbar */
@@ -45,5 +67,10 @@ body {
 /* Main content */
 .main {
   margin-top: 70px; /* Add a top margin to avoid content overlay */
+}
+
+h1 {
+  color: #333333;
+  text-align: center;
 }
 
